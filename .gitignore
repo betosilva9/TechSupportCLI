@@ -1,0 +1,12 @@
+
+# Executaveis gerados
+*.exe
+
+# Logs e arquivos temporarios
+*.log
+*.tmp
+
+# Arquivos locais
+.vscode/
+Thumbs.db
+desktop.ini
