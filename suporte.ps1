@@ -60,6 +60,13 @@ function Diagnosticar-PC {
             @{Name="Livre_GB";Expression={
                 [math]::Round($_.SizeRemaining / 1GB, 2)
             }} | Format-Table -AutoSize
+
+Write-Host "`n=== SISTEMA OPERACIONAL ===" -ForegroundColor Cyan
+
+Get-CimInstance Win32_OperatingSystem |
+    Select-Object Caption, Version, OSArchitecture |
+    Format-List
+
 }
 
 # 2 - REPARAR WINDOWS
@@ -224,3 +231,4 @@ do {
     }
 
 } while ($opcao -ne "0")
+
